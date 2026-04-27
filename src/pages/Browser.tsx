@@ -13,7 +13,6 @@ const Browser = () => {
       <header className="px-5 pt-8 pb-4">
         <h1 className="font-display text-2xl font-bold">Discover</h1>
         <p className="text-sm text-muted-foreground">Explore Web3 directly from your wallet</p>
-        <p>CA:</p>
         <p className="text-sm text-muted-foreground">$FW 7777</p>
       </header>
 
