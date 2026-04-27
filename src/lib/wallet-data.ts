@@ -39,6 +39,7 @@ export const transactions: Transaction[] = [
 ];
 
 export const dapps = [
+  { id: "flapwallet", name: "FlapWallet", category: "Wallet", url: "https://flapwallet.fun", color: "#FF007A", icon: "🦋" },
   { id: "uniswap", name: "Uniswap", category: "DEX", url: "https://app.uniswap.org", color: "#FF007A", icon: "🦄" },
   { id: "opensea", name: "OpenSea", category: "NFT", url: "https://opensea.io", color: "#2081E2", icon: "🌊" },
   { id: "aave", name: "Aave", category: "Lending", url: "https://app.aave.com", color: "#B6509E", icon: "👻" },
