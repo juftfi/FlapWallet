@@ -1,11 +1,18 @@
 import { useNavigate } from "react-router-dom";
-import { ChevronRight, Fingerprint, Lock, KeyRound, Bell, Globe, HelpCircle, LogOut, Moon } from "lucide-react";
+import { ChevronRight, Fingerprint, Lock, KeyRound, Bell, Globe, HelpCircle, LogOut, Moon, X, User, XIcon } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { useState, useEffect } from "react";
 import { Logo } from "@/components/Logo";
 import { toast } from "sonner";
 
 const groups = [
+  {
+    title: "Social",
+    items: [
+      { id: "social", label: "@flapwallet", icon: XIcon },
+      { id: "biometric", label: "t.me/flap_wallet", icon: User },
+    ],
+  },
   {
     title: "Security",
     items: [
