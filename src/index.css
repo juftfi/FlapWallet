@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FlapWallet design system — lime on obsidian. All HSL. */
+
+@layer base {
+  :root {
+    --background: 60 8% 97%;
+    --foreground: 0 0% 6%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 6%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 6%;
+
+    /* Brand: lime green from logo */
+    --primary: 75 100% 60%;
+    --primary-foreground: 0 0% 6%;
+    --primary-glow: 75 100% 70%;
+
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 75 100% 60%;
+    --accent-foreground: 0 0% 6%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 92%;
+    --ring: 75 100% 60%;
+
+    --radius: 1.25rem;
+
+    /* Surfaces */
+    --surface: 0 0% 100%;
+    --surface-elevated: 0 0% 99%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(75 100% 60%), hsl(85 100% 55%));
+    --gradient-dark: linear-gradient(160deg, hsl(0 0% 8%), hsl(0 0% 4%));
+    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(75 100% 60% / 0.25), transparent 70%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 10%), hsl(0 0% 6%));
+
+    /* Shadows */
+    --shadow-glow: 0 10px 40px -10px hsl(75 100% 60% / 0.5);
+    --shadow-card: 0 4px 24px -8px hsl(0 0% 0% / 0.08);
+    --shadow-elevated: 0 20px 60px -20px hsl(0 0% 0% / 0.4);
+
+    /* Motion */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 75 100% 60%;
+    --primary-foreground: 0 0% 6%;
+    --primary-glow: 75 100% 70%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 11%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 75 100% 60%;
+    --accent-foreground: 0 0% 6%;
+
+    --success: 142 70% 50%;
+    --success-foreground: 0 0% 6%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14%;
+    --input: 0 0% 12%;
+    --ring: 75 100% 60%;
+
+    --surface: 0 0% 8%;
+    --surface-elevated: 0 0% 11%;
+
+    --shadow-card: 0 4px 24px -8px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html, body, #root {
+    @apply h-full;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01", "ss03";
+  }
+}
+
+@layer components {
+  .glass {
+    background: hsl(var(--card) / 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@layer utilities {
+  .gradient-primary { background: var(--gradient-primary); }
+  .gradient-dark { background: var(--gradient-dark); }
+  .gradient-glow { background: var(--gradient-glow); }
+  .gradient-card { background: var(--gradient-card); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+  .transition-smooth { transition: var(--transition-smooth); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(75 100% 60% / 0.4); }
+  50% { box-shadow: 0 0 0 16px hsl(75 100% 60% / 0); }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-out infinite; }
+.animate-slide-up { animation: slide-up 0.5s var(--ease-out-expo) both; }
+.animate-fade-in { animation: fade-in 0.4s ease-out both; }
+.animate-scale-in { animation: scale-in 0.4s var(--ease-out-expo) both; }
