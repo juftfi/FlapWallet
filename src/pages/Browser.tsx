@@ -14,7 +14,7 @@ const Browser = () => {
         <h1 className="font-display text-2xl font-bold">Discover</h1>
         <p className="text-sm text-muted-foreground">Explore Web3 directly from your wallet</p>
         <p className="text-sm text-muted-foreground">CA:</p>
-        <p className="text-sm text-muted-foreground">7777</p>
+        <p className="text-sm text-muted-foreground">0x7777</p>
       </header>
 
       <div className="px-5">
