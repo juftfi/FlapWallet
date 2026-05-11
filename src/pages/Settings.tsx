@@ -10,7 +10,7 @@ const groups = [
     title: "Social",
     items: [
       { id: "social", label: "@flapwallet", icon: XIcon },
-      { id: "biometric", label: "t.me/flap_wallet", icon: User },
+      { id: "biometric", label: "t.me/flapwallets", icon: User },
     ],
   },
   {
