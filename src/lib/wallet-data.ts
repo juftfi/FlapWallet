@@ -22,11 +22,11 @@ export interface Transaction {
 }
 
 export const assets: CryptoAsset[] = [
-  { id: "btc", symbol: "BTC", name: "Bitcoin", chain: "Bitcoin", balance: 0.4821, price: 67420, change24h: 2.34, icon: "₿", color: "#F7931A" },
-  { id: "eth", symbol: "ETH", name: "Ethereum", chain: "Ethereum", balance: 3.215, price: 3520, change24h: 1.12, icon: "Ξ", color: "#627EEA" },
-  { id: "bnb", symbol: "BNB", name: "BNB", chain: "BSC", balance: 12.4, price: 612, change24h: -0.84, icon: "B", color: "#F3BA2F" },
-  { id: "sol", symbol: "SOL", name: "Solana", chain: "Solana", balance: 48.7, price: 178, change24h: 4.21, icon: "◎", color: "#9945FF" },
-  { id: "matic", symbol: "MATIC", name: "Polygon", chain: "Polygon", balance: 1240, price: 0.72, change24h: -1.45, icon: "⬡", color: "#8247E5" },
+  { id: "btc", symbol: "BTC", name: "Bitcoin", chain: "Bitcoin", balance: 0.4821, price: 81453, change24h: 2.34, icon: "₿", color: "#F7931A" },
+  { id: "eth", symbol: "ETH", name: "Ethereum", chain: "Ethereum", balance: 3.215, price: 2356, change24h: 1.12, icon: "Ξ", color: "#627EEA" },
+  { id: "bnb", symbol: "BNB", name: "BNB", chain: "BSC", balance: 12.4, price: 656, change24h: -0.84, icon: "B", color: "#F3BA2F" },
+  { id: "sol", symbol: "SOL", name: "Solana", chain: "Solana", balance: 48.7, price: 95, change24h: 4.21, icon: "◎", color: "#9945FF" },
+  { id: "pol", symbol: "POL", name: "Polygon", chain: "Polygon", balance: 1240, price: 0.102, change24h: -1.45, icon: "⬡", color: "#8247E5" },
   { id: "usdt", symbol: "USDT", name: "Tether", chain: "Ethereum", balance: 2840.5, price: 1.0, change24h: 0.01, icon: "₮", color: "#26A17B" },
 ];
 
